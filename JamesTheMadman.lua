@@ -21,7 +21,7 @@ irc.msg = ""                    -- Stores most recent msg that's been recieved
 client, err = socket.tcp()      -- Creates a TCP socket in the variable client and if there's an error put it in err
 
 if not client then              -- If client was not created then
-	error(err)                  -- return the error message
+	error(err)              -- return the error message
 end
 
 client:settimeout(60)           -- Set the timeout to 60 seconds
@@ -30,7 +30,7 @@ print("connecting...")
 client:connect(bot.server, bot.port)
 print("connected")
 
-handleInput()                   -- Handle any PINGs and such
+handleInput()                   		  -- Handle any PINGs and such
 handleInput()
 handleInput()
 
@@ -49,7 +49,7 @@ print("JOIN " .. bot.chan .. "\r\n")
 sleep(5)                                          -- Sleep for 5 seconds
 
 while true do
-	if bot.manual == true then                    -- If the bot is in manual mode then ask for input from the user
+	if bot.manual == true then                -- If the bot is in manual mode then ask for input from the user
     	print("type input: ")
     	input = io.read()
       

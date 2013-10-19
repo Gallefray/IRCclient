@@ -183,7 +183,6 @@ function handleInput()
 		elseif string.find(irc.msg, "how are you" .. bot.nick) or string.find(irc.msg, bot.nick .. ", how are you") then
 			sendMsg("I'm okay, you?")
 		end
-	else
 	end
 end
 
